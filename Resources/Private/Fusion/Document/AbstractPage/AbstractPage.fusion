@@ -38,7 +38,7 @@ prototype(Triangular.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
             <!-- link your own css files here -->
-            <link rel="stylesheet" href={StaticResource.uri('Triangular.Site', 'Public/Frontend/main.css')} />
+            <link rel="stylesheet" href={StaticResource.uri('tselfcontained.site', 'Public/Frontend/main.css')} />
         `
     }
 

@@ -31,13 +31,13 @@
 
     --border-margin: -0.0625rem;
 
-    --color: #1966FF;   /* Accent */
-    --color-1: #E69267; /* Tint */
-    --color-2: #141F33; /* Theme */
-    --color-3: #3AA67A; /* Secondary */
+    --color: #E3742D;   /* Accent */
+    --color-1: #14ADCC; /* Tint */
+    --color-2: #102C39; /* Theme */
+    --color-3: #00A1F2; /* Secondary */
 
-    --bg-color: #F1F6FF;
-    --bg-color-1: #E9EFF7;
+    --bg-color: #EBEBEB;
+    --bg-color-1: #F7F7F7;
 
     --text-color: #333;
     --text-color-1: #000;
@@ -95,8 +95,8 @@
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #101726;
-        --bg-color-1: #141F33;
+        --bg-color: #0A212B;
+        --bg-color-1: #102C39;
 
         --text-color: #F1F6FF;
         --text-color-1: #F1F6FF;
