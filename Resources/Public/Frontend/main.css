@@ -32,9 +32,9 @@
     --border-margin: -0.0625rem;
 
     --color: #E3742D;   /* Accent */
-    --color-1: #14ADCC; /* Tint */
-    --color-2: #102C39; /* Theme */
-    --color-3: #00A1F2; /* Secondary */
+    --color-1: #2D9CE3; /* Tint */
+    --color-2: #102C39; /* Scene */
+    --color-3: #742DE3; /* Secondary */
 
     --bg-color: #EBEBEB;
     --bg-color-1: #F7F7F7;
@@ -169,7 +169,6 @@ body > main {
 /*    z-index: 1;*/
     background-color: var(--bg-color-1);
     color: var(--text-color-1);
-    padding: var(--space) calc(env(safe-area-inset-right, 0) + var(--space)) var(--space-4xl) calc(env(safe-area-inset-left, 0) + var(--space));
 }
 section {
     margin-bottom: var(--space);
@@ -265,6 +264,8 @@ a {
 }
 a:hover, a:active {
     cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: wavy;
 }
 a:link {
     color: var(--color);
@@ -526,7 +527,7 @@ thead td.action {
     padding: var(--space-2xs) var(--space);
 }
 #primary-menu-button + label {
-    left: 0;
+    right: 0;
 }
 #secondary-menu-button + label {
     right: 0;
@@ -645,6 +646,18 @@ thead td.action {
 }
 
 /* grid */
+.grid-fill {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+.grid-fit {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
 .grid-2,
 .grid-3,
 .grid-4
@@ -881,6 +894,9 @@ a.card {
     margin-left: auto;
     margin-right: auto;
     overflow: visible;
+}
+.container.wide {
+  max-width: 95%;
 }
 .selection-off {
     -webkit-touch-callout: none;
