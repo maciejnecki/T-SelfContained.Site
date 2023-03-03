@@ -31,23 +31,26 @@
 
     --border-margin: -0.0625rem;
 
-    --color: #E3742D;   /* Accent */
-    --color-1: #2D9CE3; /* Tint */
-    --color-2: #003d65; /* Scene */
-    --color-3: #742DE3; /* Secondary */
+    --color: #F26D00;   /* Accent */
+    --color-1: #12C6FF; /* Tint */
+    --color-2: #031E26; /* Theme */
+    --color-3: #B6EDFF; /* Secondary */
 
     --accentColor: var(--color);
     --tintColor: var(--color-1);
     --sceneColor: var(--color-2);
     --altColor: var(--color-3);
 
-    --bg-color: #000a0e;
-    --bg-color-1: #000000;
+    --bg-color: #010E12;
+    --bg-color-1: #000a0e;
 
     --text-color: #F1F6FF;
     --text-color-1: #F1F6FF;
     --text-color-2: #999;
     --text-color-3: #ccc;
+
+    --text-color-inv: #242424;
+    --text-color-light: #F1F6FF;
 
     --white-color: #ffffff;
     --black-color: #000000;
@@ -63,6 +66,8 @@
     --yellow-color: #ffd00d;
     --brown-color: #a2835d;
     --gray-color: #8d8d92;
+
+    --shadow: 5px 5px 0 0 #000000ff;
 }
 @media screen and (min-width: 600px) {
     :root {
@@ -101,10 +106,10 @@
 
 
 /* Style Applicators */
-.accentColor {color: var(--white-color); background: var(--color)}
-.tintColor {color: var(--white-color); background: var(--color-1)}
-.themeColor {color: var(--white-color); background: var(--color-2)}
-.secondaryColor {color: var(--white-color); background: var(--color-3)}
+.accentColor {color: var(--text-color-light); background: var(--color)}
+.tintColor {color: var(--text-color-light); background: var(--color-1)}
+.themeColor {color: var(--text-color-light); background: var(--color-2)}
+.secondaryColor {color: var(--text-color-inv); background: var(--color-3)}
 
 .left { text-align: left; }
 .center { text-align: center; }
@@ -191,7 +196,6 @@ hr {
 /* typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    color: var(--text-color-1);
     margin-top: var(--space-3xl);
     margin-bottom: var(--space);
 }
@@ -345,7 +349,7 @@ input[type=reset], input[type=submit], button, .button {
     cursor: pointer;
     border: none;
     padding: var(--space-2xs) var(--space-s);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.13);
+    box-shadow: var(--shadow);
     width: auto;
     margin: 6px;
 }
@@ -869,8 +873,8 @@ a.card {
 }
 
 .container {
-    padding: 6px;
-    border-radius: 2px;
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: 0.3rem;
     position: relative;
     display: block;
     clear: both;

@@ -3,12 +3,16 @@ prototype(Triangular.Site:Content.Button) < prototype(Neos.Neos:ContentComponent
 
     title = ${q(node).property('title')}
     url = ${q(node).property('url')}
+    url.@process.convertUris = Neos.Neos:ConvertUris 
     centering = ${q(node).property('centering')}
     color = ${q(node).property('color')}
 
 
 
+
     renderer = afx`
+
+
       <a href={props.url}>
           <div class={'button ' + props.centering + '' + props.color} >
               {props.title}
